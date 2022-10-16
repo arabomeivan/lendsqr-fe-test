@@ -9,7 +9,7 @@ function App() {
 
       {/*LEFT SECTION OF PAGE*/}
 
-      <div className="col-sm-6">
+      <div className="col-sm-6" id='leftsection'>
         {/*Logo Section*/}
         <div className="row" id='logo'>
           <div className="col-sm-12">
@@ -28,7 +28,7 @@ function App() {
       </div>
       
       {/*RIGHT SECTION OF PAGE*/}
-      <div className="col-sm-6" id="login form">
+      <div className="col-sm-6" id="rightsection">
 
         {/*Welcome Text*/}
         <div className="row" id="welcometext">
