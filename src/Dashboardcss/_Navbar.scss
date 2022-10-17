@@ -1,0 +1,122 @@
+#navbar
+{
+    background: #FFFFFF;
+    box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+    height: 100px;
+}
+#searchboxcontainer
+{
+left: 23.82%;
+right: 48.4%;
+top: 30%;
+bottom: 30%;
+width:400px;
+height:40px;
+
+}
+#searchbox
+{
+opacity: 0.2;
+border: 1px solid #213F7D;
+border-top-left-radius: 8px;
+border-bottom-left-radius: 8px;
+}
+#basic-addon1
+{
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: #39CDCC;
+}
+#searchicon
+{
+    color: #FFFFFF;
+}
+
+#docs
+{
+margin-right: 2px;
+align-self: center;
+bottom: 37%;
+height: 19px;
+width: 50px;
+margin-right: 10%;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+text-decoration-line: underline;
+
+
+}
+
+#linktodocs
+{
+    color: #213F7D;
+
+}
+#bellcontainer
+{
+height: 26px;
+width: 26px;
+align-self: center;
+margin-right: 14%;
+}
+#controlitems
+{
+    margin-right: 20px;
+}
+
+#profilepicturecontainer
+{
+height: 40px;
+width: 160px;
+margin-right: 10%;
+align-self: center;
+}
+#profilepicture
+{
+    background-image: url('/public/assets/images/image\ 4.jpg'); 
+}
+
+#companynamecontainer
+{
+height: 19px;
+width: auto;
+align-self: center;
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+margin-right: 5%;
+/* identical to box height */
+
+
+color: #213F7D;
+}
+
+#dropdowncontainer
+{
+height: 20px;
+width: 20px;
+align-self: center;
+color: #213F7D;
+}
+#bellicon, #dropdownicon
+{
+    color: #213F7D;
+}
+#logo
+{
+left: 2.08%;
+right: 87.86%;
+top: 35%;
+}
+#union
+{
+    background-image: url(/public/assets/images/Union.png);
+    background-repeat: no-repeat;
+}

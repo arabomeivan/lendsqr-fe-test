@@ -10,8 +10,8 @@ export function Login()
   {/*Logo Section*/}
   <div className="row" id='logo'>
     <div className="col-sm-12">
-  <img src="/public/assets/images/Union.png" alt="" />
-  <img src="/public/assets/images/lendsqr.png" alt="" />
+  <img src="/public/assets/images/Union.png" alt="" className="img-fluid" />
+  <img src="/public/assets/images/lendsqr.png" alt="" className="img-fluid"/>
     </div>
   </div>
 

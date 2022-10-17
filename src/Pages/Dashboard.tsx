@@ -1,5 +1,9 @@
 import '../Dashboardcss/Dashboard.css';
-import {Navbar} from '../Dashboardcomponents/Navbar'
+import {Navbar} from '../Dashboardcomponents/Navbar';
+import {Route, Routes, Link} from 'react-router-dom'
+
+
+import {Sidebarcontent}from '../Dashboardcomponents/Sidebarcontent';
 
 export function Dashboard()
 {
@@ -11,13 +15,13 @@ export function Dashboard()
         <div className="row">
                 <div className="col-sm-6" id="sidebar">
                     
-                <br/>cckjcjc
+                <Sidebarcontent/>
                     
                 </div>
 
                 <div className="col-sm-6" id="maincontent">
                     <div className="container">
-                        dhjdhdjh
+                        
                     </div>
                 </div>
             </div></>
