@@ -1,0 +1,106 @@
+@import url(./_Mobile_responsiveness.scss);
+#logo {
+  width: 173.76px;
+  height: 36px;
+  left: 97px;
+  margin-top: 106px;
+}
+
+#heroosection {
+  position: absolute;
+  width: 600px;
+  height: 337.57px;
+  left: 67px;
+  top: 281px;
+  background: url("/public/assets/images/pablo-sign-in 1.jpg");
+}
+
+#welcometext {
+  position: absolute;
+  width: 183px;
+  height: 55px;
+  margin-left: 100px;
+  margin-top: 220px;
+  font-family: "Avenir Next";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 55px;
+  /* identical to box height */
+  letter-spacing: -0.04em;
+  color: #213F7D;
+}
+
+#logindetailstext {
+  position: absolute;
+  width: 200px;
+  height: 28px;
+  margin-left: 100px;
+  margin-top: 280px;
+  font-family: "Avenir Next";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  /* identical to box height */
+  color: #545F7D;
+}
+
+#logincredentials {
+  margin-top: 368px;
+  position: absolute;
+  margin-left: 100px;
+}
+
+#email {
+  box-sizing: border-box;
+  width: 447px;
+  height: 50px;
+  background: #FFFFFF;
+  border: 2px solid rgba(84, 95, 125, 0.15);
+  border-radius: 5px;
+}
+
+label {
+  color: #545F7D;
+}
+
+#password {
+  box-sizing: border-box;
+  width: 447px;
+  height: 50px;
+  left: 836px;
+  top: 442px;
+  background: #FFFFFF;
+  border: 2px solid rgba(84, 95, 125, 0.15);
+  border-radius: 5px;
+}
+
+#forgotpasswordcontainer {
+  width: 147px;
+  height: 17px;
+  left: 100px;
+  margin-top: 24px;
+  font-family: "Avenir Next";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 16px;
+  /* identical to box height */
+  text-transform: uppercase;
+}
+
+#forgotpasswordlink {
+  color: #39CDCC;
+}
+
+#loginbtn {
+  width: 447px;
+  height: 48px;
+  left: 58.06%;
+  right: 10.9%;
+  margin-top: 71px;
+  background: #39CDCC;
+  border-color: #39CDCC;
+  border-radius: 8px;
+}/*# sourceMappingURL=Login.css.map */
