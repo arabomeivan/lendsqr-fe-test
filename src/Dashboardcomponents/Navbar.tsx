@@ -1,4 +1,6 @@
 import '../Dashboardcss/Dashboard.css';
+import union from '../images/Union.png'
+import lendsqr from '../images/lendsqr.png'
 
 export function Navbar()
 {
@@ -10,8 +12,8 @@ export function Navbar()
 {/*Logo Section*/}
 <div className="row" id='logo'>
     <div className="col-md-12">
-  <img src="/public/assets/images/Union.png" className='img-fluid' alt="" />
-  <img src="/public/assets/images/lendsqr.png" className='img-fluid' alt="" />
+    <img src={union} alt="not loading" className="img-fluid" id='union' />
+  <img src={lendsqr} alt="not loading" className="img-fluid" id='lendsqr'/>
     </div>
   </div>
 
