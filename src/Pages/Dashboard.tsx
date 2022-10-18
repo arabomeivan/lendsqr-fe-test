@@ -1,4 +1,4 @@
-import '../Dashboardcss/Dashboard.css';
+import '../Css/Dashboardcss/Dashboard.css';
 import {Navbar} from '../Dashboardcomponents/Navbar';
 import {Route, Routes, Link} from 'react-router-dom'
 

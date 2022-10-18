@@ -1,4 +1,4 @@
-import '../Dashboardcss/Dashboard.css';
+import '../Css/Dashboardcss/Dashboard.css';
 import union from '../images/Union.png'
 import lendsqr from '../images/lendsqr.png'
 

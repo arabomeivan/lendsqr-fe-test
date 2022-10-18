@@ -1,4 +1,5 @@
-import '../Dashboardcss/Sidebarcontent.css';
+
+import '../Css/Dashboardcss/Sidebarcontent.css'
 import {Route, Routes, Link} from 'react-router-dom'
 export function Sidebarcontent()
 {
