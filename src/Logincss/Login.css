@@ -1,9 +1,21 @@
 @import url(./_Mobile_responsiveness.scss);
 #logo {
-  width: 173.76px;
+  width: 200.76px;
+  height: 40px;
+  margin-left: 97px;
+  margin-top: 100px;
+}
+
+#union {
+  width: 24.75px;
+  height: 25px;
+}
+
+#lendsqr {
+  width: 138.44px;
   height: 36px;
-  left: 97px;
-  margin-top: 106px;
+  margin-top: 5px;
+  margin-left: 10.58px;
 }
 
 #heroosection {

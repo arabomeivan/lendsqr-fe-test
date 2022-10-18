@@ -1,4 +1,5 @@
-
+import union from '../images/Union.png'
+import lendsqr from '../images/lendsqr.png'
 export function Login()
 {
     return(
@@ -10,8 +11,8 @@ export function Login()
   {/*Logo Section*/}
   <div className="row" id='logo'>
     <div className="col-sm-12">
-  <img src="/public/assets/images/Union.png" alt="" className="img-fluid" />
-  <img src="/public/assets/images/lendsqr.png" alt="" className="img-fluid"/>
+  <img src={union} alt="not loading" className="img-fluid" id='union' />
+  <img src={lendsqr} alt="not loading" className="img-fluid" id='lendsqr'/>
     </div>
   </div>
 
