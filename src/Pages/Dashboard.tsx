@@ -1,6 +1,5 @@
 import "../Css/Dashboardcss/Dashboard.css";
 import { Navbar } from "../Dashboardcomponents/Navbar";
-import { Route, Routes, Link } from "react-router-dom";
 
 import { Sidebarcontent } from "../Dashboardcomponents/Sidebarcontent";
 

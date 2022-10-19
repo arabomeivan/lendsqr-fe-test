@@ -1,0 +1,89 @@
+#usercontent
+{
+    margin-top: 25%;
+    width: auto;
+}
+
+
+#users, #activeusers, #usersloans, #usersavings
+{
+    box-sizing: border-box;
+width: 220px;
+height: 160px;
+top: 228px;
+
+background: #FFFFFF;
+border: 1px solid rgba(33, 63, 125, 0.06);
+box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+border-radius: 4px;
+margin-right: 26px;
+}
+
+.table-responsive
+{
+    box-sizing: border-box;
+
+width: 960px;
+height: auto;
+margin-top: 40px;
+
+background: #FFFFFF;
+border: 1px solid rgba(33, 63, 125, 0.06);
+box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+border-radius: 4px;
+
+
+}
+thead
+{
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    
+    color: #545F7D;
+    border-bottom: hidden;
+}
+.fa-list
+{
+    margin-left: 10px;
+    margin-top: 1px;
+}
+tbody
+{
+    font-size: 14px;
+    color: #545F7D;
+}
+
+#usersbackground, #activeusersbackground, #usersloansbackground, #usersavingsbackground
+{
+width: 40px;
+height: 40px;
+margin-left: 30px;
+margin-top: 20px;
+
+}
+#userstitle, #activeuserstitle, #usersloanstitle, #usersavingstitle
+{
+    position: absolute;
+margin-left: 20px;
+margin-top: 14px;
+
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 16px;
+text-transform: uppercase;
+
+color: #545F7D;
+
+}
+.icons
+{
+
+margin-left: 30px;
+margin-top: 20px;
+
+}
