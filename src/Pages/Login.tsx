@@ -1,5 +1,6 @@
 import union from '../images/Union.png'
 import lendsqr from '../images/lendsqr.png'
+import { Link } from "react-router-dom";
 export function Login()
 {
     return(
@@ -70,7 +71,7 @@ export function Login()
 </div>
 
 {/**login button */}
-<button className="btn btn-primary" type="button" id='loginbtn'>Login</button>
+<Link to="/users"><button className="btn btn-primary" type="button" id='loginbtn'>Login</button></Link>
  </form>
 
   
