@@ -19,15 +19,15 @@ export function Userstable(props: any)
     {
       props.fetchedUsers.map((user: any, index: number) => {
         return (
-          <tr key={index}>
-            <th scope="row">{index + 1}</th>
-            <td>{user.orgName}</td>
-            <td>{user.userName}</td>
-            <td>{user.email}</td>
-            <td>{user.phoneNumber}</td>
-            <td>{user.createdAt}</td>
-            {/* <td>@mdo</td> */}
-          </tr>
+          <tr>
+          <th scope="row">{index + 1}</th>
+          <td>{user.orgName}</td>
+          <td>{user.userName}</td>
+          <td>{user.email}</td>
+          <td>{user.phoneNumber}</td>
+          <td>{user.createdAt}</td>
+          {/* <td>@mdo</td> */}
+        </tr>
         )
       })
     }
