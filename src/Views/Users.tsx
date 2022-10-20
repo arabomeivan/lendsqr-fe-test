@@ -1,9 +1,9 @@
 import "../Css/Dashboardcss/Dashboard.css";
 import '../Css/Usercontentcss/usercontent.css'
 import "../Css/Dashboardcss/Sidebarcontent.css";
-import { Usercontent } from "../Usercomponents/Usercontent";
-import { Navbar } from "../Dashboardcomponents/Navbar";
-import { Sidebarcontent } from "../Dashboardcomponents/Sidebarcontent";
+import { Usercontent } from "../Components/Usercomponents/Usercontent";
+import { Navbar } from "../Components/Dashboardcomponents/Navbar";
+import { Sidebarcontent } from "../Components/Dashboardcomponents/Sidebarcontent";
 
 export function Users() {
   return (
