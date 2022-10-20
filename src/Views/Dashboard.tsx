@@ -1,7 +1,7 @@
 import "../Css/Dashboardcss/Dashboard.css";
-import { Navbar } from "../Components/Dashboardcomponents/Navbar";
+import { Navbar } from "../Dashboardcomponents/Navbar";
 
-import { Sidebarcontent } from "../Components/Dashboardcomponents/Sidebarcontent";
+import { Sidebarcontent } from "../Dashboardcomponents/Sidebarcontent";
 
 export function Dashboard() {
   return (

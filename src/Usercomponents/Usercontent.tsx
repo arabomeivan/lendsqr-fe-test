@@ -4,7 +4,7 @@ import coins from "../images/coins.png";
 import file from "../images/file.png";
 import users from "../images/users.png";
 import activeusers from "../images/activeusers.png";
-export function Usercontent(){
+export function Usercontent(props: any){
     return(
 
         <div className="row">
@@ -77,7 +77,7 @@ export function Usercontent(){
               </div>
             </div>
 
-            <Userstable></Userstable>
+            <Userstable fetchedUsers={props.fetchedUsers}></Userstable>
         </div>
     );
 }
