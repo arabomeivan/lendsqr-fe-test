@@ -20,12 +20,15 @@ import users1 from "../images/users 1.png";
 import piggybank from "../images/piggy-bank 1.png";
 import transactions from "../images/icon.png";
 import badge from "../images/badge-percent 1.png";
+import axios from 'axios'
 
 
 
 
 export function Sidebarcontent() {
   return (
+
+    
     /**Main container for sidebar content */
 
 
