@@ -24,11 +24,20 @@ import badge from "../images/badge-percent 1.png";
 
 
 
+
 export function Sidebarcontent() {
+
+
+ 
+
   return (
+       
+    
+
+    
     /**Main container for sidebar content */
 
-
+    
     
     <div className="row" id="navigationmenu">
       <div className="col-sm-12">

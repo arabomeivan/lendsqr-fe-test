@@ -1,9 +1,9 @@
 import React from "react";
 import "./Css/Logincss/Login.css";
 import { Route, Routes } from "react-router-dom";
-import { Dashboard } from "./Pages/Dashboard";
-import { Login } from "./Pages/Login";
-import { Users } from "./Pages/Users";
+import { Dashboard } from "./Views/Dashboard";
+import { Login } from "./Views/Login";
+import { Users } from "./Views/Users";
 
 /**Defining Route to Dashboard page(component) */
 
