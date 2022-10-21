@@ -1,4 +1,5 @@
 @import url(./_Navbar.scss);
+@import url(./_dashboard_mobile_responsiveness.scss);
 #sidebar {
   width: 283px;
   height: 1695px;

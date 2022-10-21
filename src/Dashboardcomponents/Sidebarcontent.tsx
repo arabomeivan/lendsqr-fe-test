@@ -74,56 +74,56 @@ export function Sidebarcontent() {
           <li className="nav-item">
             <Link to="/users" className="nav-link">
             <img src={userfriends} alt="notloading" className='img-fluid sidebaricons'/>
-              <span id="nav-text">Users</span>
+              <span id="users" className="nav-text">Users</span>
             </Link>
           </li>
 
           <li className="nav-item">
             <Link to="/request" className="nav-link">
             <img src={users1} alt="notloading" className='img-fluid sidebaricons'/>
-              <span id="nav-text">Guarantors</span>
+              <span id="guarantors" className="nav-text">Guarantors</span>
             </Link>
           </li>
 
           <li className="nav-item">
             <Link to="/request" className="nav-link">
             <img src={sack} alt="notloading" className='img-fluid sidebaricons'/>
-              <span id="nav-text">Loans</span>
+              <span id="loans" className="nav-text">Loans</span>
             </Link>
           </li>
 
           <li className="nav-item">
             <Link to="/request" className="nav-link">
             <img src={handshake} alt="notloading" className='img-fluid sidebaricons'/>
-              <span id="nav-text">Decision Models</span>
+              <span id="decision" className="nav-text">Decision Models</span>
             </Link>
           </li>
 
           <li className="nav-item">
             <Link to="/request" className="nav-link">
             <img src={piggybank} alt="notloading" className='img-fluid sidebaricons'/>
-              <span id="nav-text">Savings</span>
+              <span id="savings" className="nav-text">Savings</span>
             </Link>
           </li>
 
           <li className="nav-item">
             <Link to="/request" className="nav-link">
             <img src={grp104} alt="notloading" className='img-fluid sidebaricons'/>
-              <span id="nav-text">Loan Requests</span>
+              <span id="loanrequest" className="nav-text">Loan Requests</span>
             </Link>
           </li>
 
           <li className="nav-item">
             <Link to="/request" className="nav-link">
             <img src={usercheck} alt="notloading" className='img-fluid sidebaricons'/>
-              <span id="nav-text">Whitelist</span>
+              <span id="whitelist" className="nav-text">Whitelist</span>
             </Link>
           </li>
 
           <li className="nav-item">
             <Link to="/request" className="nav-link">
             <img src={usertimes} alt="notloading" className='img-fluid sidebaricons'/>
-              <span id="nav-text">Karma</span>
+              <span id="karma" className="nav-text">Karma</span>
             </Link>
           </li>
         </ul>
@@ -137,63 +137,63 @@ export function Sidebarcontent() {
           <li className="nav-item">
             <Link to="/charts" className="nav-link">
             <img src={briefcase1} alt="notloading" className='img-fluid sidebaricons'/>
-              <span id="nav-text">Organization</span>
+              <span id="organization" className="nav-text">Organization</span>
             </Link>
           </li>
 
           <li className="nav-item">
             <Link to="/request" className="nav-link">
             <img src={grp104} alt="notloading" className='img-fluid sidebaricons'/>
-              <span id="nav-text">Loan Products</span>
+              <span id="loanproducts" className="nav-text">Loan Products</span>
             </Link>
           </li>
 
           <li className="nav-item">
             <Link to="/request" className="nav-link">
             <img src={bank} alt="notloading" className='img-fluid sidebaricons'/>
-              <span id="nav-text">Saving Products</span>
+              <span id="savingproducts" className="nav-text">Saving Products</span>
             </Link>
           </li>
 
           <li className="nav-item">
             <Link to="/request" className="nav-link">
             <img src={coins_solid} alt="notloading" className='img-fluid sidebaricons'/>
-              <span id="nav-text">Fees and Charges</span>
+              <span id="fees" className="nav-text">Fees and Charges</span>
             </Link>
           </li>
 
           <li className="nav-item">
             <Link to="/request" className="nav-link">
             <img src={transactions} alt="notloading" className='img-fluid sidebaricons'/>
-              <span id="nav-text">Transactions</span>
+              <span id="transactions" className="nav-text">Transactions</span>
             </Link>
           </li>
 
           <li className="nav-item">
             <Link to="/request" className="nav-link">
             <img src={galaxy} alt="notloading" className='img-fluid sidebaricons'/>
-              <span id="nav-text">Services</span>
+              <span id="services" className="nav-text">Services</span>
             </Link>
           </li>
 
           <li className="nav-item">
             <Link to="/request" className="nav-link">
             <img src={usercog} alt="notloading" className='img-fluid sidebaricons'/>
-              <span id="nav-text">Service Account</span>
+              <span id="serviceacct" className="nav-text">Service Account</span>
             </Link>
           </li>
 
           <li className="nav-item">
             <Link to="/request" className="nav-link">
             <img src={scroll} alt="notloading" className='img-fluid sidebaricons'/>
-              <span id="nav-text">Settlements</span>
+              <span id="settlement" className="nav-text">Settlements</span>
             </Link>
           </li>
 
           <li className="nav-item">
             <Link to="/request" className="nav-link">
             <img src={chartbar} alt="notloading" className='img-fluid sidebaricons'/>
-              <span id="nav-text">Reports</span>
+              <span id="reports" className="nav-text">Reports</span>
             </Link>
           </li>
         </ul>
@@ -207,21 +207,21 @@ export function Sidebarcontent() {
           <li className="nav-item">
             <Link to="/charts" className="nav-link">
             <img src={sliders} alt="notloading" className='img-fluid sidebaricons'/>
-              <span id="nav-text">Preferences</span>
+              <span id="preferences" className="nav-text">Preferences</span>
             </Link>
           </li>
 
           <li className="nav-item">
             <Link to="/request" className="nav-link">
             <img src={badge} alt="notloading" className='img-fluid sidebaricons'/>
-              <span id="nav-text">Fees and Pricing</span>
+              <span id="feesandpricing" className="nav-text">Fees and Pricing</span>
             </Link>
           </li>
 
           <li className="nav-item">
             <Link to="/request" className="nav-link">
             <img src={clipboardlist} alt="notloading" className='img-fluid sidebaricons'/>
-              <span id="nav-text">Audit Logs</span>
+              <span id="audit" className="nav-text">Audit Logs</span>
             </Link>
           </li>
         </ul>
