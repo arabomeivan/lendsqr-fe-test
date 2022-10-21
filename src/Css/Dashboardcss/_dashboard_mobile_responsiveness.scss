@@ -1,0 +1,151 @@
+
+
+@media screen and (max-width: 480px) 
+{
+    .nav-item
+    {
+        font-size: 14px;
+    }
+
+    #searchboxcontainer
+     {
+        margin-left: 15px;
+        width: 300px;
+    }
+    #profilepicturecontainer {
+        width: 175px;
+        
+    }
+
+    #dropdowncontainer
+    {
+        display: none;
+    }
+
+    #controlitems {
+        margin-left: 20px;
+    }
+
+    div#sidebar
+    {
+    
+    width: 120px;
+    height: auto;
+    
+    }
+    div#switchoragnizationtext
+    {
+        height: auto;
+        font-size: 14px;
+        margin-left: 5px;
+    }
+
+    span#dropdownspan
+    {
+        display: none;
+    }
+
+    
+
+    li.nav-item
+    {
+        width: 100px;
+    }
+    .sidebaricons
+    {
+        margin-left: 20px;
+    }
+
+    /*Adjusting title for navigation menu on span tags*/
+    span#users
+    {
+        margin-left: 10px;
+    }
+    #guarantors
+    {
+        margin-left: -5px;
+    }
+    #loans
+    {
+        margin-left: 7px;
+    }
+    #decision
+    {
+        margin-left: 1px;
+    }
+    #savings
+    {
+        margin-left: 3px;
+    }
+    #loanrequest
+    {
+        margin-left: 2px;
+    }
+    #whitelist
+    {
+        margin-left: -5px;
+    }
+    #karma
+    {
+        margin-left: 2px;
+    }
+    #organization
+    {
+        margin-left: -14px;
+    }
+    #loanproducts
+    {
+        margin-left: 3px;
+    }
+    #savingproducts
+    {
+        margin-left: 1px;
+    }
+    #fees
+    {
+        margin-left: 2px;
+    }
+    #transactions
+    {
+        margin-left: -8px;
+    }
+    #services
+    {
+        margin-left: 5px;
+    }
+    #serviceacct
+    {
+        margin-left: 2px;
+    }
+    #settlement
+    {
+        margin-left: -5px;
+    }
+    div#maincontent
+    {
+        width: 60%;
+    margin-top: 200px;
+    margin-left: 8px;
+    }
+
+    #users, #activeusers, #usersloans, #usersavings {
+        margin-bottom: 10px;
+    }
+
+    div#usersloanstitle, div#usersavingstitle, div#activeuserstitle, #divuserstitle
+    {
+        margin-left: 0px;
+    }
+
+    #navbar
+    {
+        height: 200px;
+    }
+    #navigationmenu
+    {
+        margin-top: 200px;
+    }
+    /*End of Adjusting title for navigation menu on span tags*/
+}
+
+
