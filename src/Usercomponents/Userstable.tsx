@@ -3,7 +3,8 @@ export function Userstable(props: any)
   console.log(props.fetchedUsers)
     return(
 
-        <table className="table table-responsive">
+      <div className="col-sm-6 col-12 table-responsive">
+            <table className="table">
   <thead>
     <tr>
       <th scope="col">S/N</th>
@@ -20,19 +21,21 @@ export function Userstable(props: any)
       props.fetchedUsers.map((user: any, index: number) => {
         return (
           <tr key={index}>
-            <th scope="row">{index + 1}</th>
-            <td>{user.orgName}</td>
-            <td>{user.userName}</td>
-            <td>{user.email}</td>
-            <td>{user.phoneNumber}</td>
-            <td>{user.createdAt}</td>
-            {/* <td>@mdo</td> */}
-          </tr>
+          <th scope="row">{index + 1}</th>
+          <td>{user.orgName}</td>
+          <td>{user.userName}</td>
+          <td>{user.email}</td>
+          <td>{user.phoneNumber}</td>
+          <td>{user.createdAt}</td>
+          {/* <td>@mdo</td> */}
+        </tr>
         )
       })
     }
     
   </tbody>
 </table>
+      </div>
+    
     );
 }
