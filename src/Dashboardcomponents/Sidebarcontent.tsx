@@ -40,23 +40,23 @@ export function Sidebarcontent() {
     
     
     <div className="row" id="navigationmenu">
-      <div className="col-sm-12">
-        {/** Switch Organization */}
-        <div className="input-group mb-3" id="switchorganizationcontainer">
+      <div className="col-sm-12">      
+        <div className="accordion-item">
+
+      <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+      
+           {/** Switch Organization */}
           <span className="input-group-text" id="breifcasespan">
           <img src={briefcase1} alt="notloading" className='img-fluid sidebaricons'/>
           </span>
-          <div className="row" id="switchoragnizationtext">
-            <div className="col-sm-12">Switch Organization</div>
-          </div>
-          <span className="input-group-text" id="dropdownspan">
-            <i className="fa-solid fa-caret-down" id="dropdwonicon"></i>
-          </span>
-        </div>
+          Switch Organization
+      </button>
 
-      
-        {/** Dashboard */}
-        <div className="input-group mb-3" id="dashboardcontainer">
+    <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div className="accordion-body">
+
+         {/** Dashboard */}
+      <div className="input-group mb-3" id="dashboardcontainer">
           <span className="input-group-text" id="homespan">
           <img src={home} alt="notloading" className='img-fluid sidebaricons'/>
           </span>
@@ -74,7 +74,7 @@ export function Sidebarcontent() {
           <li className="nav-item">
             <Link to="/users" className="nav-link">
             <img src={userfriends} alt="notloading" className='img-fluid sidebaricons'/>
-              <span id="users" className="nav-text">Users</span>
+              <span id="userstab" className="nav-text">Users</span>
             </Link>
           </li>
 
@@ -225,6 +225,9 @@ export function Sidebarcontent() {
             </Link>
           </li>
         </ul>
+      </div>
+    </div>
+  </div>
       </div>
     </div>
   );

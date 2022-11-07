@@ -3,6 +3,7 @@ import "./Css/Logincss/Login.css";
 import { Route, Routes } from "react-router-dom";
 import { Login } from "./Views/Login";
 import { Users } from "./Views/Users";
+import {Userdetails} from "./Views/Userdetails"
 
 /**Defining Route to Dashboard page(component) */
 
@@ -11,6 +12,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Login />} />
       <Route path="/users" element={<Users />}></Route>
+      <Route path="/usersdetails" element={<Userdetails />}></Route>
     </Routes>
   );
 }

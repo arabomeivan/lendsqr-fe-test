@@ -18,7 +18,104 @@ box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
 border-radius: 4px;
 margin-right: 20px;
 }
+.numberofusers
+{
 
+width: 65px;
+height: 28px;
+margin-left: 20px;
+margin-top: 50px;
+
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 28px;
+text-transform: uppercase;
+
+color: #213F7D;
+}
+
+#numberitems
+{
+    border: none;
+    margin-left: 0px;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #545F7D;
+    opacity: 0.6;
+    margin-right: 5px;
+}
+#numberitems:hover
+{
+    background-color: #FFFFFF;
+    color: #213F7D !important; 
+}
+
+#numberitems:focus
+{
+    color: #213F7D !important; 
+    box-shadow: none;
+    background-color: #FFFFFF;
+}
+
+.pagination
+{
+    margin-top: 26px;
+    width: 48%;
+    margin-left: 51.4%;
+}
+#status
+{
+    
+width: auto;
+height: 30px;
+background: #545F7D;
+opacity: 0.06;
+border-radius: 100px;
+}
+#filter
+{
+    margin-left: 10px;
+}
+#previous, #next
+{
+    
+background: rgba(33, 63, 125, 0.1);
+border-radius: 4px;
+
+}
+
+.historymode
+{
+   margin-bottom:10px;
+}
+
+.page-link
+{
+    width: 10px;
+    height: 20px;
+}
+
+.spinner-border
+{
+    margin-left: 42%;
+    margin-top: 10%;
+    width: 5rem;
+    height: 5rem;
+}
+.history
+{
+
+right: 22.95%;
+background: rgba(33, 63, 125, 0.1);
+border-radius: 4px;
+width: 25px;
+height: 25px;
+}
 .table-responsive
 {
     box-sizing: border-box;

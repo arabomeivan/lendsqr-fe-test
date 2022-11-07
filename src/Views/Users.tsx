@@ -1,28 +1,70 @@
 import "../Css/Dashboardcss/Dashboard.css";
-import '../Css/Usercontentcss/usercontent.css'
+import "../Css/Usercontentcss/usercontent.css";
 import "../Css/Dashboardcss/Sidebarcontent.css";
 import { Usercontent } from "../Usercomponents/Usercontent";
 import { Navbar } from "../Dashboardcomponents/Navbar";
 import { Sidebarcontent } from "../Dashboardcomponents/Sidebarcontent";
-import axios from 'axios'
-import { useState, useEffect } from "react";
+import axios from "axios";
+import { useState, useEffect, useMemo, SetStateAction } from "react";
+import { arrayBuffer } from "node:stream/consumers";
 
 export function Users() {
+  const url =
+    "https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users";
+  const [users, setUsers] = useState([]);
+
+  const [loading, setloading] = useState(true);
+  const [tablevisibility, settablevisibility] = useState(false);
+
+  //Pagination to display 10 users per page
+
+  const [pagenumber, setpagenumber] = useState(1);
+  const [usersperpage, setusersperpage] = useState(10);
+
+  //count the number of active users
+  const activeusers = [];
+
+  const users_with_loans= [];
+  const users_with_savings = [];
+
+  users.map((user: any, index: number) => {
+    if (user.lastActiveDate != null) {
+      activeusers.push(user.id);
+    }
+  });
+
+  //count the number users with loans
+   
+  users.map((user: any, index: number) => {
+    if (user.education.loanRepayment != null) {
+      users_with_loans.push(user.id);
+    }
+  });
+  //count the number of users with savings
+   
+  users.map((user: any, index: number) => {
+    if (user.accountBalance != null) {
+      users_with_savings.push(user.id);
+    }
+  });
 
 
-  const url = 'https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users'
-  const [users, setusers] = useState([])
+  useEffect(() => {
+    axios.get(url).then((Response) => {
+      setUsers(Response.data);
 
-  useEffect(()=>
-  {
-    axios.get(url).then(response =>
-      {
-        setusers(response.data)
-      })
-      
-  }, [url])
+      setloading(false);
+      settablevisibility(true);
+    });
+  }, []);
 
-  
+  const indexoflastpage = pagenumber * usersperpage;
+  const indexoffirstpage = indexoflastpage - usersperpage;
+  let [currentusers] = useState([]);
+
+  currentusers = users.slice(indexoffirstpage, indexoflastpage);
+
+  const paginate = (pageNumber: number) => setpagenumber(pageNumber);
 
   return (
     <>
@@ -36,7 +78,17 @@ export function Users() {
 
         <div className="col-sm-6" id="maincontent">
           <div className="container" id="usercontent">
-            <Usercontent fetchedUsers={users}></Usercontent>
+            <Usercontent
+              fetchedUsers={currentusers}
+              loading={loading}
+              tablevisibility={tablevisibility}
+              usersperpage={usersperpage}
+              totalusers={users.length}
+              paginate={paginate}
+              activeusers={activeusers.length}
+              userswithloans={users_with_loans.length}
+              users_with_savings={users_with_savings.length}
+            ></Usercontent>
           </div>
         </div>
       </div>

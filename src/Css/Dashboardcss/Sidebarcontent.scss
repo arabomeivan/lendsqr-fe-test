@@ -91,6 +91,31 @@ color: #213F7D;
    
    color: white;
 }
+.accordion-item
+{
+    margin-top: 50%;
+    border: none;
+    color: #213F7D;
+}
+
+.accordion-button:not(.collapsed)
+{
+    background-color: white;
+    box-shadow: none;
+    border: none;
+    color: #213F7D;
+}
+
+.accordion-button:not(.collapsed)::after 
+{
+    color: #213F7D;
+}
+
+.accordion-button:focus{
+    box-shadow: none;
+    color: #213F7D;
+
+}
 
 .nav-link:focus
 {
