@@ -24,11 +24,30 @@ export function Users() {
   //count the number of active users
   const activeusers = [];
 
+  const users_with_loans= [];
+  const users_with_savings = [];
+
   users.map((user: any, index: number) => {
     if (user.lastActiveDate != null) {
       activeusers.push(user.id);
     }
   });
+
+  //count the number users with loans
+   
+  users.map((user: any, index: number) => {
+    if (user.education.loanRepayment != null) {
+      users_with_loans.push(user.id);
+    }
+  });
+  //count the number of users with savings
+   
+  users.map((user: any, index: number) => {
+    if (user.accountBalance != null) {
+      users_with_savings.push(user.id);
+    }
+  });
+
 
   useEffect(() => {
     axios.get(url).then((Response) => {
@@ -67,6 +86,8 @@ export function Users() {
               totalusers={users.length}
               paginate={paginate}
               activeusers={activeusers.length}
+              userswithloans={users_with_loans.length}
+              users_with_savings={users_with_savings.length}
             ></Usercontent>
           </div>
         </div>

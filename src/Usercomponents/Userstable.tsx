@@ -55,7 +55,7 @@ export function Userstable(props: any) {
                   <td>{user.orgName}</td>
                   <td>{user.userName}</td>
                   <td>{user.email}</td>
-                  <td>{user.phoneNumber}</td>
+                  <td>{user.profile.phoneNumber}</td>
                   <td>{user.createdAt}</td>
                   <td><div id="status">inactive</div> <img src={useroptions} className="img-fluid" alt="" /></td>
                   {/* <td>@mdo</td> */}

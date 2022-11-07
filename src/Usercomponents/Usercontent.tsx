@@ -14,6 +14,8 @@ export function Usercontent(props: any) {
   const totalusers = props.totalusers;
   let usersperpage = props.usersperpage;
   const pagenumbers = [];
+  const no_users_with_loans = props.userswithloans
+  const no_users_with_savings = props.users_with_savings
   const no_of_activeusers = props.activeusers
 
   let paginate = props.paginate
@@ -59,8 +61,10 @@ export function Usercontent(props: any) {
           <div className="col-sm-12">USERS WITH LOANS</div>
         </div>
 
-        <div className="row">
-          <div className="col-sm-12"></div>
+        <div className="row numberofusers">
+          <div className="col-sm-12">
+            {no_users_with_loans}
+          </div>
         </div>
       </div>
       <div className="col-sm-3" id="usersavings">
@@ -70,8 +74,10 @@ export function Usercontent(props: any) {
           <div className="col-sm-12">USERS WITH SAVINGS</div>
         </div>
 
-        <div className="row">
-          <div className="col-sm-12"></div>
+        <div className="row numberofusers">
+          <div className="col-sm-12">
+            {no_users_with_savings}
+          </div>
         </div>
       </div>
 
