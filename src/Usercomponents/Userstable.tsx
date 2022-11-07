@@ -19,6 +19,8 @@ export function Userstable(props: any) {
     </div>}
     
     { tablevisibility && <div className="col-sm-6 col-12 table-responsive">
+
+   
         <table className="table">
           <thead>
             <tr>
@@ -37,6 +39,7 @@ export function Userstable(props: any) {
               <th scope="col">
                 Date Joined <img src={filter} className="img-fluid" alt="" id="filter"/>
               </th>
+      
 
               <th scope="col">
                 Status<img src={filter} className="img-fluid" alt="" id="filter" />
