@@ -57,7 +57,11 @@ export function Userstable(props: any) {
                   <td>{user.email}</td>
                   <td>{user.profile.phoneNumber}</td>
                   <td>{user.createdAt}</td>
-                  <td><div id="status">inactive</div> <img src={useroptions} className="img-fluid" alt="" /></td>
+                  <td>
+                    <div className="row">
+                      <div className="col-sm-6"><div id="status">inactive</div></div>
+                      <div className="col-sm-6"><img src={useroptions} className="img-fluid" alt="" /></div>
+                      </div></td>
                   {/* <td>@mdo</td> */}
                 </tr>
               );
