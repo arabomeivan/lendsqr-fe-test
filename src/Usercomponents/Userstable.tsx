@@ -1,74 +1,87 @@
-import useroptions from "../images/useroptions.png"
-import filter from "../images/filter-results.png"
+import useroptions from "../images/useroptions.png";
+import filter from "../images/filter-results.png";
+import { Link } from "react-router-dom";
 
 export function Userstable(props: any) {
+  //Props
+  const loading = props.loading;
+  const tablevisibility = props.tablevisibility;
 
+  return (
+    <>
+      {loading && (
+        <div className="spinner-border text-primary text-center" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      )}
 
-//Props
- const loading = props.loading
- const tablevisibility = props.tablevisibility
+      {tablevisibility && (
+        <div className="col-sm-6 col-12 table-responsive">
+          <table className="table">
+            <thead>
+              <tr>
+                <th scope="col">
+                  Organization
+                  <img src={filter} className="img-fluid" alt="" id="filter" />
+                </th>
+                <th scope="col">
+                  Username
+                  <img src={filter} className="img-fluid" alt="" id="filter" />
+                </th>
+                <th scope="col">
+                  Email
+                  <img src={filter} className="img-fluid" alt="" id="filter" />
+                </th>
+                <th scope="col">
+                  Phone Number
+                  <img src={filter} className="img-fluid" alt="" id="filter" />
+                </th>
+                <th scope="col">
+                  Date Joined{" "}
+                  <img src={filter} className="img-fluid" alt="" id="filter" />
+                </th>
 
+                <th scope="col">
+                  Status
+                  <img src={filter} className="img-fluid" alt="" id="filter" />
+                </th>
 
-
-      
-
-  return(
-
-    <>{ loading && <div className="spinner-border text-primary text-center" role="status">
-      <span className="visually-hidden">Loading...</span>
-    </div>}
-    
-    { tablevisibility && <div className="col-sm-6 col-12 table-responsive">
-
-   
-        <table className="table">
-          <thead>
-            <tr>
-              <th scope="col">
-                Organization<img src={filter} className="img-fluid" alt="" id="filter" />
-              </th>
-              <th scope="col">
-                Username<img src={filter} className="img-fluid" alt="" id="filter" />
-              </th>
-              <th scope="col">
-                Email<img src={filter} className="img-fluid" alt="" id="filter" />
-              </th>
-              <th scope="col">
-                Phone Number<img src={filter} className="img-fluid" alt="" id="filter" />
-              </th>
-              <th scope="col">
-                Date Joined <img src={filter} className="img-fluid" alt="" id="filter"/>
-              </th>
-      
-
-              <th scope="col">
-                Status<img src={filter} className="img-fluid" alt="" id="filter" />
-              </th>
-              
-              {/* <th scope="col">Status<i className="fa-solid fa-list"></i></th> */}
-            </tr>
-          </thead>
-          <tbody>
-            {props.fetchedUsers.map((user: any, index: number) => {
-              return (
-                <tr key={index}>
-                  <td>{user.orgName}</td>
-                  <td>{user.userName}</td>
-                  <td>{user.email}</td>
-                  <td>{user.profile.phoneNumber}</td>
-                  <td>{user.createdAt}</td>
-                  <td>
-                    <div className="row">
-                      <div className="col-sm-6"><div id="status">inactive</div></div>
-                      <div className="col-sm-6"><img src={useroptions} className="img-fluid" alt="" /></div>
-                      </div></td>
-                  {/* <td>@mdo</td> */}
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>}</>
-    );
-  
+                {/* <th scope="col">Status<i className="fa-solid fa-list"></i></th> */}
+              </tr>
+            </thead>
+            <tbody>
+              {props.fetchedUsers.map((user: any, index: number) => {
+                return (
+                  <tr key={index}>
+                    <td>{user.orgName}</td>
+                    <td>{user.userName}</td>
+                    <td>{user.email}</td>
+                    <td>{user.profile.phoneNumber}</td>
+                    <td>{user.createdAt}</td>
+                    <td>
+                      <div className="row">
+                        <div className="col-sm-6">
+                          <div id="status">inactive</div>
+                        </div>
+                        <div className="col-sm-6">
+                          <Link to={`/userdetails/${user.id}`}>
+                            <img
+                              src={useroptions}
+                              className="img-fluid"
+                              alt=""
+                            />
+                          </Link>
+                        </div>
+                      </div>
+                    </td>
+                    {/* <td>@mdo</td> */}
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      )}
+    </>
+  );
 }

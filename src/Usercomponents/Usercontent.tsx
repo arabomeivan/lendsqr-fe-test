@@ -36,7 +36,7 @@ export function Usercontent(props: any) {
         </div>
 
         <div className="row numberofusers">
-          <div className="col-sm-12">{users.length}</div>
+          <div className="col-sm-12">{totalusers}</div>
         </div>
       </div>
 
