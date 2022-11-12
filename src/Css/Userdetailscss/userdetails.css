@@ -139,6 +139,19 @@
   height: 90px;
 }
 
+.progress-bar {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.progress {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30%;
+}
+
 #shortdetailscon {
   margin-top: 30px;
   font-family: "Work Sans";
