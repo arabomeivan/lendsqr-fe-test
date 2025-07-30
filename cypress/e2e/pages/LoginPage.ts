@@ -12,7 +12,13 @@ class LoginPage {
   }
 
   submit() {
-    cy.get('#logincredentials').submit();
+    cy.get('#loginbtn').click();
+  }
+
+  //Wait for the Navbar on the dashboard to ensure the user is logged in
+  waitforDashboard() {
+   return cy.get('#navcontent', { timeout: 10000 })
+     
   }
 }
 

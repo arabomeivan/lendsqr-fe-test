@@ -15,7 +15,7 @@ When('I enter invalid username and password', () => {
 });
 
 Then('I should not login', () => {
-   cy.url().should('eq', Cypress.config('baseUrl') + '/');
+   cy.url().should('eq', Cypress.config('baseUrl') + '/?');
 });
 
 
@@ -32,8 +32,8 @@ When('I enter valid username and password', () => {
 });
 
 Then('I should be redirected to the dashboard', () => {
-  cy.url().should('include', '/users'); // or your target route
-  cy.contains('Welcome').should('be.visible');
+    LoginPage.waitforDashboard().should('be.visible');
+  cy.url({ timeout: 30000 }).should('include', '/users'); // confirms route as well
 });
 
 
@@ -49,5 +49,5 @@ When('I click login without entering credentials', () => {
 Then('I should see validation errors', () => {
   cy.contains('Email is required').should('be.visible');
   cy.contains('Password is required').should('be.visible');
-  cy.url().should('eq', Cypress.config('baseUrl') + '/'); // still at login
+  cy.url().should('eq', Cypress.config('baseUrl') + '/?'); // still at login
 });

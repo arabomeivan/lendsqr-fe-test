@@ -15,7 +15,7 @@ This project was created to test my ability in product design translation, dynam
 
 ## Test Documentation
 
-You can find full test documentation [here](https://docs.google.com/document/d/1nu-BZYQEcH6N6N_gyno_U1fDGJRzyZrWtiRnXXYigDo/edit?usp=sharing)  
+You can find full test documentation and TestCase Deliverable in the plan [here](https://docs.google.com/document/d/1nu-BZYQEcH6N6N_gyno_U1fDGJRzyZrWtiRnXXYigDo/edit?usp=sharing)  
 
 
 ---
