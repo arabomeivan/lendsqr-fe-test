@@ -22,7 +22,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "cypress run --browser chrome --headed",
+    "test": "cypress run --browser chrome --headless",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
