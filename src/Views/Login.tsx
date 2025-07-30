@@ -29,6 +29,7 @@ export function Login()
 {/*RIGHT SECTION OF PAGE*/}
 <div className="col-sm-6" id="rightsection">
 
+  {/* I did not know there was a welcome text lol */}
   {/*Welcome Text*/}
   <div className="row" id="welcometext">
     <div className="col-sm-12">
