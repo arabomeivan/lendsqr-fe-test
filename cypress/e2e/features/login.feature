@@ -6,11 +6,11 @@ Feature: Login
     Then I should not login
 
   Scenario: Login with valid credentials
-    Given I open the login page
+    Given I launch the login page
     When I enter valid username and password
     Then I should be redirected to the dashboard
 
   Scenario: Login without filling any fields
-    Given I open the login page
+    Given I navigate to the login page
     When I click login without entering credentials
     Then I should see validation errors

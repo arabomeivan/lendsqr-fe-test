@@ -21,7 +21,7 @@ Then('I should not login', () => {
 
 //Login with valid credentials
 
-Given('I open the login page', () => {
+Given('I launch the login page', () => {
   LoginPage.visit();
 });
 
@@ -38,7 +38,7 @@ Then('I should be redirected to the dashboard', () => {
 
 
 //Login without filling any fields
-Given('I open the login page', () => {
+Given('I navigate to the login page', () => {
   LoginPage.visit();
 });
 
