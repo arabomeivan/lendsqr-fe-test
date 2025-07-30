@@ -22,9 +22,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "cypress run --browser chrome --headless",
-    "eject": "react-scripts eject"
-  },
+    "test": "start-server-and-test start http://localhost:3000 cy:run",
+    "eject": "react-scripts eject",
+    "cy:run": "cypress run --browser chrome --headless"
+  }
+,
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -47,6 +49,7 @@
     "@badeball/cypress-cucumber-preprocessor": "^22.2.0",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.5",
     "cypress": "^14.5.3",
-    "esbuild": "^0.25.8"
+    "esbuild": "^0.25.8",
+    "start-server-and-test": "^2.0.12"
   }
 }
