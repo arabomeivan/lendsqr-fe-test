@@ -9,7 +9,6 @@ on:
 jobs:
     TestingCodeSyntax:
         runs-on: ubuntu-latest
-        environment: production
         steps:
         - name: Clone code repository
           uses: actions/checkout@v2
