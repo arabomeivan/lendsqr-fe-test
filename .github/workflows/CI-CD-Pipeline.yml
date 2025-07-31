@@ -9,6 +9,7 @@ on:
 jobs:
     TestingCodeSyntax:
         runs-on: ubuntu-latest
+        environment: production
         steps:
         - name: Clone code repository
           uses: actions/checkout@v2
@@ -49,6 +50,7 @@ jobs:
 
     DeployChanges:
       runs-on: ubuntu-latest
+      environment: production
       needs: TestApplicationFunctionality
       if: github.ref == 'refs/heads/main'
 
