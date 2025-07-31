@@ -1,4 +1,4 @@
-# LENDSQR FRONTEND ENGINEERING TEST
+# LENDSQR FRONTEND
 
 This project was created to test my ability in product design translation, dynamic data rendering, and automated testing across both frontend and backend APIs.
 
