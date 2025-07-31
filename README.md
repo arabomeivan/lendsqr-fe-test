@@ -187,7 +187,6 @@ Tests use mocked or fixture-based data:
 
 * `.feature` files written in Gherkin
 * Cypress test specs and step definitions
-* Postman collections and Newman CLI runner
 * Auto-generated test coverage reports
 * Test case documentation for all major flows
 
