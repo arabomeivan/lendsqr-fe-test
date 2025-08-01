@@ -1,84 +1,102 @@
 import union from '../images/Union.png'
 import lendsqr from '../images/lendsqr.png'
-import { Link } from "react-router-dom";
-export function Login()
-{
-    return(
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+export function Login() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
+
+  const handleLogin = async () => {
+    if (!email || !password) {
+      alert('Please fill in both email and password');
+      return;
+    }
+
+    try {
+      const response = await fetch('https://bookstoreapi-q86w.onrender.com/api/users/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await response.json();
+
+      if (response.status === 200 && data.success) {
+        localStorage.setItem('token', data.token);
+        localStorage.setItem('user', JSON.stringify(data.user));
+        navigate('/dashboard'); // 🔁 Make sure this matches your dashboard route
+      } else {
+        alert(data.message || 'Login failed');
+      }
+    } catch (err:string | any) {
+      alert('An error occurred. Please try again.');
+      console.error(err.message);
+    }
+  };
+
+  return (
+    <div className="row">
+      {/* LEFT SECTION */}
+      <div className="col-sm-6" id="leftsection">
+        <div className="row" id="logo">
+          <div className="col-sm-12">
+            <img src={union} alt="not loading" className="img-fluid" id="union" />
+            <img src={lendsqr} alt="not loading" className="img-fluid" id="lendsqr" />
+          </div>
+        </div>
         <div className="row">
-       
-{/*LEFT SECTION OF PAGE*/}
+          <div className="col-sm-12" id="heroosection"></div>
+        </div>
+      </div>
 
-<div className="col-sm-6" id='leftsection'>
-  {/*Logo Section*/}
-  <div className="row" id='logo'>
-    <div className="col-sm-12">
-  <img src={union} alt="not loading" className="img-fluid" id='union' />
-  <img src={lendsqr} alt="not loading" className="img-fluid" id='lendsqr'/>
+      {/* RIGHT SECTION */}
+      <div className="col-sm-6" id="rightsection">
+        <div className="row" id="welcometext">
+          <div className="col-sm-12">Welcome!</div>
+        </div>
+        <div className="row" id="logindetailstext">
+          <div className="col-sm-12">Enter details to login.</div>
+        </div>
+
+        <form id="logincredentials" onSubmit={(e) => e.preventDefault()}>
+          <div className="form-floating mb-3">
+            <input
+              type="email"
+              className="form-control"
+              id="email"
+              placeholder="name@example.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <label htmlFor="email">Email address</label>
+          </div>
+
+          <div className="form-floating">
+            <input
+              type="password"
+              className="form-control"
+              id="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <label htmlFor="password">Password</label>
+          </div>
+
+          <div className="row" id="forgotpasswordcontainer">
+            <div className="col-sm-12">
+              <a href="#" id="forgotpasswordlink">FORGOT PASSWORD?</a>
+            </div>
+          </div>
+
+          <button className="btn btn-primary" type="button" id="loginbtn" onClick={handleLogin}>
+            Login
+          </button>
+        </form>
+      </div>
     </div>
-  </div>
-
-  {/*Heroo Section*/}
-
-  <div className="row">
-    <div className="col-sm-12" id="heroosection">
-     
-    </div>
-  </div>
-</div>
-
-{/*RIGHT SECTION OF PAGE*/}
-<div className="col-sm-6" id="rightsection">
-
-  {/* I did not know there was a welcome text lol */}
-  {/*Welcome Text*/}
-  <div className="row" id="welcometext">
-    <div className="col-sm-12">
-    Welcome!
-    </div>
-  </div>
-
-  
-  
-  {/*LoginDetailsText*/}
-  <div className="row" id="logindetailstext">
-    <div className="col-sm-12">
-    Enter details to login.
-    </div>
-  </div>
-
-
-
-{/**LOGIN FORM*/}
-
-<form action="" id='logincredentials'>
-
-  {/** email */}
- <div className="form-floating mb-3">
-<input type="email" className="form-control" id="email" placeholder="name@example.com"></input>
-   <label htmlFor="email">Email address</label>
- </div>
-
- {/** password */}
-<div className="form-floating">
-<input type="password" className="form-control" id="password" placeholder="Password"></input>
-<label htmlFor="password">Password</label>
-</div>
-
-{/** Forgot password */}
-<div className="row" id='forgotpasswordcontainer'>
-  <div className="col-sm-12">
-    <a href="#" id='forgotpasswordlink'>FORGOT PASSWORD?</a>
-  </div>
-</div>
-
-{/**login button */}
-<Link to="/users"><button className="btn btn-primary" type="button" id='loginbtn'>Login</button></Link>
- </form>
-
-  
-
-</div>
-</div>
-
-    );
+  );
 }
+
+

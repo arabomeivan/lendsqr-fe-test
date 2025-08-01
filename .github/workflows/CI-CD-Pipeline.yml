@@ -49,7 +49,6 @@ jobs:
 
     DeployChanges:
       runs-on: ubuntu-latest
-      environment: production
       needs: TestApplicationFunctionality
       if: github.ref == 'refs/heads/main'
 
