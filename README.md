@@ -65,7 +65,7 @@ npm run test
 Tests include:
 
 * Cypress (headless UI tests)
-* API tests via Postman + Newman (if configured)
+* API tests also with cypress in node repo
 
 ### 6. Build the App for Production
 
