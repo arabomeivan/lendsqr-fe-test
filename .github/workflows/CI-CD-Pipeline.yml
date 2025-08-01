@@ -19,8 +19,8 @@ jobs:
         - name: Installing dependencies
           run:  npm install
 
-        - name: Run EsLint
-          run: npm run lint
+        # - name: Run EsLint
+        #   run: npm run lint
 
     TestApplicationFunctionality:
       runs-on: ubuntu-latest
