@@ -1,11 +1,14 @@
-import union from '../images/Union.png'
-import lendsqr from '../images/lendsqr.png'
+import union from '../images/Union.png';
+import lendsqr from '../images/lendsqr.png';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+
 export function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(false); // 🌀 New loading state
   const navigate = useNavigate();
+  const jwtToken = process.env.JWT_SECRET;
 
   const handleLogin = async () => {
     if (!email || !password) {
@@ -13,10 +16,15 @@ export function Login() {
       return;
     }
 
+    setLoading(true);
+
     try {
       const response = await fetch('https://bookstoreapi-q86w.onrender.com/api/users/login', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${jwtToken}`,
+        },
         body: JSON.stringify({ email, password }),
       });
 
@@ -25,13 +33,17 @@ export function Login() {
       if (response.status === 200 && data.success) {
         localStorage.setItem('token', data.token);
         localStorage.setItem('user', JSON.stringify(data.user));
-        navigate('/dashboard'); // 🔁 Make sure this matches your dashboard route
+        navigate('/users');
       } else {
         alert(data.message || 'Login failed');
       }
-    } catch (err:string | any) {
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        console.error(err.message);
+      }
       alert('An error occurred. Please try again.');
-      console.error(err.message);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -90,13 +102,26 @@ export function Login() {
             </div>
           </div>
 
-          <button className="btn btn-primary" type="button" id="loginbtn" onClick={handleLogin}>
-            Login
+          <button
+            className="btn btn-primary"
+            type="button"
+            id="loginbtn"
+            onClick={handleLogin}
+            disabled={loading}
+          >
+            {loading ? (
+              <>
+                <div className="spinner-border" role="status">
+  <span className="visually-hidden">Loading...</span>
+</div>
+
+              </>
+            ) : (
+              'Login'
+            )}
           </button>
         </form>
       </div>
     </div>
   );
 }
-
-

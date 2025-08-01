@@ -1,6 +1,6 @@
 import LoginPage from '../pages/LoginPage';
 import { Given, When, Then } from '@badeball/cypress-cucumber-preprocessor';
-import loginData from "../../fixtures/login.json";
+import {invalidCreds, validCreds} from "../../fixtures/login";
 
 //Login with invalid credentials
 Given('I open the login page', () => {
@@ -8,14 +8,17 @@ Given('I open the login page', () => {
 });
 
 When('I enter invalid username and password', () => {
-  LoginPage.enterUsername(loginData.email);
-  LoginPage.enterPassword(loginData.password);
+  LoginPage.enterUsername(invalidCreds.email);
+  LoginPage.enterPassword(invalidCreds.password);
   LoginPage.submit();
 
 });
 
 Then('I should not login', () => {
-   cy.url().should('eq', Cypress.config('baseUrl') + '/?');
+  cy.on('window:alert', (str) => {
+    expect(str).to.equal('User not found');
+  });
+   cy.url().should('eq', Cypress.config('baseUrl') + '/');
 });
 
 
@@ -26,8 +29,8 @@ Given('I launch the login page', () => {
 });
 
 When('I enter valid username and password', () => {
-  LoginPage.enterUsername(loginData.email);
-  LoginPage.enterPassword(loginData.password);
+  LoginPage.enterUsername(validCreds.email);
+  LoginPage.enterPassword(validCreds.password);
   LoginPage.submit();
 });
 
@@ -47,7 +50,9 @@ When('I click login without entering credentials', () => {
 });
 
 Then('I should see validation errors', () => {
-  cy.contains('Email is required').should('be.visible');
-  cy.contains('Password is required').should('be.visible');
-  cy.url().should('eq', Cypress.config('baseUrl') + '/?'); // still at login
+  cy.on('window:alert', (str) => {
+    expect(str).to.equal('Please fill in both email and password');
+  });
+
+  cy.url().should('eq', Cypress.config('baseUrl') + '/'); 
 });
